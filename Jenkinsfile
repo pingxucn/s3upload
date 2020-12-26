@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                retry(3) {
+                retry(2) {
                     sh './flakey-deploy.sh'
                 }
 
